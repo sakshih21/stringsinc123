@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+   char str1[50] = "Hello";
+   char str2[50] = "World";
+   char result[100];
+
+   // String Length
+   printf("Length of str1: %d\n", strlen(str1));
+
+   // String Copy
+   strcpy(result, str1);
+   printf("Result after copying str1: %s\n", result);
+
+   // String Concatenation
+   strcat(result, str2);
+   printf("Result after concatenating str2: %s\n", result);
+
+   // String Comparison
+   int cmp = strcmp(str1, str2);
+   if (cmp == 0) {
+      printf("str1 and str2 are equal.\n");
+   } else if (cmp < 0) {
+      printf("str1 is less than str2.\n");
+   } else {
+      printf("str1 is greater than str2.\n");
+   }
+
+   // String Substring
+   char substr[50];
+   strncpy(substr, str1, 3);
+   substr[3] = '\0';  // Adding null character to terminate the substring
+   printf("Substring of str1: %s\n", substr);
+
+   return 0;
+}
+
